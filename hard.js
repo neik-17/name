@@ -74,7 +74,7 @@ buttons.forEach(button => {
         }
 
         if (![...letters.children].some(li => li.innerText === "")) {
-            resultMessage.innerText = "You won 🎉 2 points are added.";
+            resultMessage.innerText = "You won 🎉";
             resultImg.src = "happyreact.png";
             gameModal.classList.add("show");
             addPoints();
