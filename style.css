@@ -1,0 +1,164 @@
+body {
+    background: #ffe0e0; 
+    color: #6d6875; 
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    text-align: center;
+}
+
+h1 {
+    font-size: 3rem;
+    color: #b5838d; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.05);
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+h2, h3 {
+    color: #a5a5a5;
+    font-weight: 300;
+}
+
+a {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px 20px;
+    color: #6d6875;
+    text-decoration: none;
+    background: #ffffff;
+    border: 1px solid #ffcdb2; 
+    border-radius: 25px; 
+    font-size: small;
+}
+
+a:hover {
+    background: #ffcdb2;
+    color: white;
+    box-shadow: 0 8px 15px rgba(255, 205, 178, 0.4);
+    transform: translateY(-2px);
+}
+
+.word-display {
+    display: flex;
+    gap: 12px;
+    list-style: none;
+    padding: 0;
+    margin: 30px 0;
+    justify-content: center;
+}
+
+.word-display .letter {
+    width: 40px;
+    height: 50px;
+    border-bottom: 3px solid #e5989b; 
+    font-size: 2rem;
+    font-weight: 600;
+    color: #6d6875;
+}
+
+.word-area {
+    max-width: 600px;
+    background: rgba(255, 255, 255, 0.7); 
+    backdrop-filter: blur(8px);
+    padding: 35px;
+    border-radius: 30px;
+    box-shadow: 0 10px 30px rgba(181, 131, 141, 0.1);
+}
+
+.hint b, .guesses b {
+    color: #e5989b;
+}
+
+.keyboard {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(40px, 1fr));
+    gap: 8px;
+    margin-top: 25px;
+}
+
+.keyboard button {
+    padding: 12px;
+    font-size: 1rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    background: #ffffff;
+    color: #b5838d;
+    border: 1px solid #f2e9e4;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.keyboard button:hover {
+    background: #f2e9e4; 
+    color: #6d6875;
+}
+
+.keyboard button:active {
+    transform: scale(0.95);
+}
+
+.game-modal {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(109, 104, 117, 0.3); 
+    backdrop-filter: blur(5px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+}
+
+.game-modal:not(.show) {
+    display: none;
+}
+
+.game-modal .content {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 30px;
+    border: 2px solid #ffcdb2;
+}
+
+.game-modal img {
+    max-width: 180px;
+    border-radius: 20px;
+    opacity: 0.9;
+}
+
+.play-again{
+     display: inline-block;
+    margin: 10px;
+    padding: 10px 20px;
+    color: #6d6875;
+    text-decoration: none;
+    background: #ffffff;
+    border: 1px solid #ffcdb2; 
+    border-radius: 25px; 
+    font-size: small;
+}
+
+.play-again:hover{
+    background: #ffcdb2;
+    color: white;
+    box-shadow: 0 8px 15px rgba(255, 205, 178, 0.4);
+    transform: translateY(-2px);
+}
+
+/* 3D sideways spin animation */
+@keyframes spinY {
+  from { transform: rotateY(0deg); }
+  to { transform: rotateY(360deg); }
+}
+
+.momi-oni {
+  width: 150px;
+  animation: spinY 2s linear infinite; /* spins horizontally forever */
+  transform-style: preserve-3d;       /* needed for 3D effect */
+}

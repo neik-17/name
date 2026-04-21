@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>Absolute Logophilia</title>
+
+        <meta charset="UTF-8">
+        <meta name ="author" content="Jay Xian">
+        <meta name="viewport"
+        content = "width=device-width, initial-scale=0.1">
+        <link rel = "stylesheet" href="style.css">
+        </head>
+        <body>
+            <form>
+
+            <div>
+                <h1>Absolute Logophilia</h1>
+            </div>
+
+            <div>
+                <h3>Test your vocabulary! Don't worry, we'll give you hints </h3>
+            </div>
+
+            <details>
+                <summary style="cursor: pointer; font-weight: bold; font-size: 1.5rem;">
+                    How to Play (Click Me!)
+                </summary>
+                <div style="padding: 10px; border: 1px solid #ccc; margin-top: 5px;">
+                    <p>1. Click the username button to add your username into our system.</p>
+                    <p>2. Pick from the three modes.</p>
+                    <p>3. Try to answer the questions by clicking the letters of the word you want to answer.</p>
+                    <p>4. When you get the answer right or wrong you have the option to try again or switch to another game mode.</p>
+                </div>
+            </details>
+
+            <br>
+
+            <div>
+            <h1 id="greetings"></h1>
+            </div>
+
+            <br>
+
+            <p id="points">Points: 0</p>
+
+            <br>
+
+            <div>
+            <h3>Add Your Username!</h3>
+            </div>
+
+            <div>
+            <a href="username.html"> Username</a>
+            </div>
+            
+            <div>
+            <h2>Modes</h2>
+            </div>
+
+            <div>
+            <a href = "normal.html" onclick = "selectMode('normal')"> Normal Mode</a>
+            </div>
+
+            <div>
+            <a href = "hard.html" onclick = "selectMode('hard')"> Hard Mode</a>
+            </div>
+
+            <div>
+            <a href = "canthoutan.html" onclick="selectMode('canthoutan')"> Absolute Canthoutan</a>
+            </div>
+
+            <br>
+
+            <div id="leaderboard"></div>
+
+            </form>
+
+            <script src="username.js"></script>
+
+        </body>
+    </html>
+    
